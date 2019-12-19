@@ -10,7 +10,32 @@
     <script type="text/javascript" src="/src/KartLogic.js"></script>
     <script type="text/javascript" src="/src/KartUI.js"></script>
   </head>
+
   <body>
-    <button type="button" id="click-button">CLICK ME</button>
+    <div
+      style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;"
+      id="shop-items-container"
+    >
+      <div>PRODUCT DETAIL</div>
+      <div>QUANTITY</div>
+      <div>PRICE</div>
+      <div>TOTAL</div>
+    </div>
+
+    <div style="padding-top:150px">
+      <div>Order Summary</div>
+      <div>
+        <div id="total-items"></div>
+        <div id="undiscounted-cost"></div>
+      </div>
+      <div>
+        <div>DISCOUNTS:</div>
+        <div id="discounted-list"></div>
+      </div>
+      <div>
+        <div>TOTAL COST:</div>
+        <div id="total-cost"></div>
+      </div>
+    </div>
   </body>
 </html>

@@ -23,6 +23,7 @@ The sheel script automatically:
 - run the unit tests
 - start the server
 - open the app
+  nb: the page automatically opens with `google chrome`; if you would rather have firefox for example, just change `google chrome` on line 16 of `server.js` to `firefox`.
 
 <!-- By opening your browser on http://localhost:3000, you can now you can play with the game.
 Here is a screenshot of what the app looks like: -->
