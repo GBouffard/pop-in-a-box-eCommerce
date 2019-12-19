@@ -65,11 +65,48 @@ describe("Kart logic - ", () => {
     });
   });
 
-  xit("should apply a bulk discount when relevant items are added", () => {});
+  it("should apply a bulk discount when relevant items are added", () => {
+    for (let i = 0; i < 9; i++) {
+      kartLogic.addItem("Naruto");
+    }
+    const narutoData = findItem("Naruto", kartLogic.kart);
+    const bulkedDiscountCost =
+      narutoData.price * narutoData.quantity - narutoData.quantity;
+    expect(kartLogic.price).toEqual(bulkedDiscountCost);
+  });
 
   describe("examples kart", () => {
-    xit("should should work with example one", () => {});
+    it("should should work with example one", () => {
+      kartLogic.addItem("Goku");
+      kartLogic.addItem("Goku");
+      kartLogic.addItem("Naruto");
+      kartLogic.addItem("Naruto");
+      kartLogic.addItem("Naruto");
+      expect(kartLogic.price).toEqual(62);
+    });
 
-    xit("should should work with example two", () => {});
+    it("should should work with example two", () => {
+      [
+        "Goku",
+        "Goku",
+        "Goku",
+        "Goku",
+        "Goku",
+        "Naruto",
+        "Naruto",
+        "Naruto",
+        "Naruto",
+        "Luffy",
+        "Luffy",
+        "Luffy",
+        "Luffy",
+        "Luffy",
+        "Luffy",
+        "Luffy"
+      ].forEach(name => kartLogic.addItem(name));
+      kartLogic.removeItem("Naruto");
+      kartLogic.removeItem("Luffy");
+      expect(kartLogic.price).toEqual(111);
+    });
   });
 });
