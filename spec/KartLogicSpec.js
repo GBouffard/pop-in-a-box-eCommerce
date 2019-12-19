@@ -36,13 +36,33 @@ describe("Kart logic - ", () => {
   });
 
   describe("price", () => {
-    xit("should be 0 by default", () => {});
+    it("should be 0 by default", () => {
+      expect(kartLogic.price).toEqual(0);
+    });
 
-    xit("should update the price when 1 item is added", () => {});
+    it("should update the price when 1 item is added", () => {
+      kartLogic.addItem("Goku");
+      const gokuData = findItem("Goku", kartLogic.kart);
+      expect(kartLogic.price).toEqual(gokuData.price);
+    });
 
-    xit("should apply a two for one discount when an even amount of relevant items are added", () => {});
+    it("should apply a two for one discount when an even amount of relevant items are added", () => {
+      kartLogic.addItem("Goku");
+      kartLogic.addItem("Goku");
+      const gokuData = findItem("Goku", kartLogic.kart);
+      expect(kartLogic.price).toEqual(gokuData.price);
+    });
 
-    xit("should apply a two for one discount when an odd amount of relevant items are added", () => {});
+    it("should apply a two for one discount when an odd amount of relevant items are added", () => {
+      kartLogic.addItem("Goku");
+      kartLogic.addItem("Goku");
+      kartLogic.addItem("Goku");
+      const gokuData = findItem("Goku", kartLogic.kart);
+      const oddCost =
+        (gokuData.price * gokuData.quantity - gokuData.price) / 2 +
+        gokuData.price;
+      expect(kartLogic.price).toEqual(oddCost);
+    });
   });
 
   xit("should apply a bulk discount when relevant items are added", () => {});
