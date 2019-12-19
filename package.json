@@ -1,0 +1,22 @@
+{
+  "name": "popinaboxecommerce",
+  "version": "1.0.0",
+  "description": "a pop in a box eCommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GBouffard/pop-in-a-box-eCommerce.git"
+  },
+  "author": "Guillaume Bouffard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GBouffard/pop-in-a-box-eCommerce/issues"
+  },
+  "homepage": "https://github.com/GBouffard/pop-in-a-box-eCommerce#readme",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
