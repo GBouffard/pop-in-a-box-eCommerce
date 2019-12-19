@@ -1,18 +1,38 @@
 const KartLogic = require("../src/KartLogic");
 
+const findItem = (name, kart) => kart.find(el => el.name === name);
+
 describe("Kart logic - ", () => {
+  let kartLogic;
+
   beforeEach(() => {
     kartLogic = new KartLogic();
   });
 
   describe("kart", () => {
-    xit("should have no items in the kart by default", () => {});
+    it("should have no items in the kart by default", () => {
+      const zeroItemsKart = kartLogic.kart.filter(item => item.quantity === 0);
+      expect(zeroItemsKart).toEqual(kartLogic.kart);
+    });
 
-    xit("should add an item in the kart when clicked", () => {});
+    it("should add an item in the kart when clicked", () => {
+      kartLogic.addItem("Goku");
+      const gokuData = findItem("Goku", kartLogic.kart);
+      expect(gokuData.quantity).toEqual(1);
+    });
 
-    xit("should remove an item from the kart when clicked", () => {});
+    it("should remove an item from the kart when clicked", () => {
+      kartLogic.addItem("Goku");
+      kartLogic.removeItem("Goku");
+      const gokuData = findItem("Goku", kartLogic.kart);
+      expect(gokuData.quantity).toEqual(0);
+    });
 
-    xit("should not remove an item from the kart if there are none to remove", () => {});
+    it("should not remove an item from the kart if there are none to remove", () => {
+      kartLogic.removeItem("Goku");
+      const gokuData = findItem("Goku", kartLogic.kart);
+      expect(gokuData.quantity).toEqual(0);
+    });
   });
 
   describe("price", () => {
