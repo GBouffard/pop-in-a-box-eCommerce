@@ -4,7 +4,8 @@
   "description": "a pop in a box eCommerce",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine spec/*.js"
+    "test": "jasmine spec/*.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/GBouffard/pop-in-a-box-eCommerce#readme",
   "dependencies": {
-    "jasmine": "^3.5.0"
+    "express": "^4.17.1",
+    "jasmine": "^3.5.0",
+    "open": "^7.0.0"
   }
 }

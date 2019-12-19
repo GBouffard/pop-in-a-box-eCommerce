@@ -1,4 +1,4 @@
-# :dolls: Pop in a box shop :dolls:
+# :dolls: Pop in a box eCommerce shop :dolls:
 
 simple e-commerce shop with JavaScript and JQuery:
 
@@ -12,22 +12,19 @@ simple e-commerce shop with JavaScript and JQuery:
 ## How to run it
 
 ```
-git clone git@github.com:GBouffard/pop-in-a-box-shop.git
-cd pop-in-a-box-shop
-npm install
+git clone git@github.com:GBouffard/pop-in-a-box-eCommerce.git
+cd pop-in-a-box-eCommerce
+./build.sh
 ```
+
+The sheel script automatically:
+
+- install packages
+- run the unit tests
+- start the server
+- open the app
 
 <!-- By opening your browser on http://localhost:3000, you can now you can play with the game.
 Here is a screenshot of what the app looks like: -->
 
 <!-- ![](public/screenshot.png) -->
-
-## How to run tests
-
-```
-npm test
-```
-
-<!-- and this is what you should see:
-
-![](public/Jasmine_screenshot.png) -->
