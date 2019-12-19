@@ -128,7 +128,7 @@ describe("Kart logic - ", () => {
       ].forEach(name => kartLogic.addItem(name));
       kartLogic.removeItem("Naruto");
       kartLogic.removeItem("Luffy");
-      expect(kartLogic.totalCost).toEqual(111);
+      expect(kartLogic.totalCost).toEqual(117);
     });
   });
 });

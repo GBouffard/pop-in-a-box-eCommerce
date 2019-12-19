@@ -21,7 +21,7 @@ function KartLogic() {
       price: 7.5,
       quantity: 0,
       twoForOne: false,
-      bulkDiscount: true,
+      bulkDiscount: false,
       cost: 0
     }
   ];
