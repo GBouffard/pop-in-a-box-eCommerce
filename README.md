@@ -7,7 +7,11 @@ simple e-commerce shop with JavaScript and JQuery:
 - Javascript
 - JQuery
 - Jasmine
-- HTML & CSS
+- HTML
+- Sass
+- Node
+- Express
+- Open
 
 ## How to run it
 
@@ -25,7 +29,6 @@ The sheel script automatically:
 - open the app
   nb: the page automatically opens with `google chrome`; if you would rather have firefox for example, just change `google chrome` on line 16 of `server.js` to `firefox`.
 
-<!-- By opening your browser on http://localhost:3000, you can now you can play with the game.
-Here is a screenshot of what the app looks like: -->
+## Screenshot
 
-<!-- ![](public/screenshot.png) -->
+![](assets/images/screenshot.png)
