@@ -76,7 +76,7 @@ $(document).ready(() => {
     const itemCostId = `${lowerName}-cost`;
 
     shopItemsContainer.append(`
-      <div>${name}</div>
+      <div class="item-description">${name}</div>
       <div class="justify-align-centered">
         <div id="${removeButtonId}" class="item-button"> - </div>
         <span id="${itemQuantityId}">${selectedItem.quantity}</span>

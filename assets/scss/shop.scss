@@ -8,8 +8,9 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: red;
   @include flex-full-center;
+  background: midnightblue;
+  font-family: sans-serif;
 }
 
 #shop__wrapper {
@@ -18,20 +19,29 @@ body {
   max-width: 1200px;
   max-height: 720px;
   border: 3px solid black;
+  background: white;
 }
 
 #shop__section-titles {
   display: flex;
   height: 10%;
+  font-size: 20px;
+  font-weight: bold;
 
   & :first-child {
     width: 75%;
-    background: orange;
+  }
+
+  & :last-child {
+    width: 25%;
+    background: whitesmoke;
   }
 
   > * {
     height: 100%;
-    line-height: 300%;
+    line-height: 250%;
+    padding-left: 10px;
+    margin-left: 10px;
   }
 }
 
@@ -45,8 +55,12 @@ body {
 }
 
 .item-label {
-  background: green;
+  background: white;
   font-weight: bold;
+
+  &:first-of-type {
+    padding-left: 20px;
+  }
 }
 
 #shop__items-container {
@@ -54,7 +68,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 1fr 1fr;
-  background: yellow;
+  background: white;
 
   & > * {
     display: flex;
@@ -67,6 +81,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 3fr 1fr;
+  background: whitesmoke;
 }
 
 .shop__summary__spacer {
@@ -78,12 +93,15 @@ body {
 
 .individual-discount {
   padding: 25px 10px;
-  background: purple;
 }
 
 #discout-label,
 #total-display {
   padding: 10px;
+}
+
+#discout-label {
+  color: dimgrey;
 }
 
 #total-display {
@@ -92,22 +110,37 @@ body {
   justify-content: space-around;
 }
 
-.item-button {
+@mixin quantity-mixin {
   @include flex-full-center;
-  cursor: pointer;
-  font-weight: bold;
-  color: blue;
-  font-size: 24px;
   width: 40px;
   height: 40px;
 }
 
+span[id$="-quantity"] {
+  @include quantity-mixin;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid darkgrey;
+}
+
+.item-button {
+  @include quantity-mixin;
+  cursor: pointer;
+  font-weight: bold;
+  color: blue;
+  font-size: 24px;
+}
+
 #checkout-button {
   @include flex-full-center;
-  font-size: 24px;
+  font-size: 18px;
   color: white;
   background: royalblue;
   padding: 10px;
   margin: 0 10px;
   border-radius: 5px;
+}
+
+.item-description {
+  padding-left: 20px;
 }

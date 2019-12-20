@@ -2,27 +2,35 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: red;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background: midnightblue;
+  font-family: sans-serif; }
 
 #shop__wrapper {
   width: 90%;
   height: 90%;
   max-width: 1200px;
   max-height: 720px;
-  border: 3px solid black; }
+  border: 3px solid black;
+  background: white; }
 
 #shop__section-titles {
   display: flex;
-  height: 10%; }
+  height: 10%;
+  font-size: 20px;
+  font-weight: bold; }
   #shop__section-titles :first-child {
-    width: 75%;
-    background: orange; }
+    width: 75%; }
+  #shop__section-titles :last-child {
+    width: 25%;
+    background: whitesmoke; }
   #shop__section-titles > * {
     height: 100%;
-    line-height: 300%; }
+    line-height: 250%;
+    padding-left: 10px;
+    margin-left: 10px; }
 
 #shop__container {
   display: flex;
@@ -34,15 +42,17 @@ body {
   align-items: center; }
 
 .item-label {
-  background: green;
+  background: white;
   font-weight: bold; }
+  .item-label:first-of-type {
+    padding-left: 20px; }
 
 #shop__items-container {
   width: 75%;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 1fr 1fr;
-  background: yellow; }
+  background: white; }
   #shop__items-container > * {
     display: flex;
     align-items: center; }
@@ -51,7 +61,8 @@ body {
   width: 25%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 3fr 1fr; }
+  grid-template-rows: 50px 3fr 1fr;
+  background: whitesmoke; }
 
 .shop__summary__spacer {
   display: flex;
@@ -60,36 +71,51 @@ body {
   padding: 0 10px; }
 
 .individual-discount {
-  padding: 25px 10px;
-  background: purple; }
+  padding: 25px 10px; }
 
 #discout-label,
 #total-display {
   padding: 10px; }
+
+#discout-label {
+  color: dimgrey; }
 
 #total-display {
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
 
+span[id$="-quantity"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid darkgrey; }
+
 .item-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   font-weight: bold;
   color: blue;
-  font-size: 24px;
-  width: 40px;
-  height: 40px; }
+  font-size: 24px; }
 
 #checkout-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
   color: white;
   background: royalblue;
   padding: 10px;
   margin: 0 10px;
   border-radius: 5px; }
+
+.item-description {
+  padding-left: 20px; }
