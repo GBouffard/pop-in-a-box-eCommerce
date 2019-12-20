@@ -11,3 +11,9 @@
   width: $buttonSize;
   height: $buttonSize;
 }
+
+@mixin right-side-hr {
+  width: 15%;
+  margin-right: 5%;
+  right: 0;
+}

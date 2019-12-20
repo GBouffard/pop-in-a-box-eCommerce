@@ -37,7 +37,7 @@ const displayIndivdualDiscounts = (kart, totalCost) => {
         $(`#${name.toLowerCase()}-discount`).css("display", "block").html(`
         <div class="shop__summary__spacer individual-discount">
           <div>${offerType(name, quantity, twoForOne, bulkDiscount)}</div>
-          <div>- ${quantity * price - cost} €</div>
+          <div class="bold">- ${quantity * price - cost} €</div>
         </div>
       `);
       } else {

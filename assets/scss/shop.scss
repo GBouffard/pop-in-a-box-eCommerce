@@ -17,6 +17,44 @@ body {
   max-height: 720px;
   border: 3px solid $customBlack;
   background: $customWhite;
+  position: relative;
+}
+
+.hr {
+  position: absolute;
+  background: $hrColor;
+  height: 1px;
+}
+
+#first-hr {
+  width: 65%;
+  top: 10%;
+  margin-left: 5%;
+}
+
+#second-hr {
+  @include right-side-hr;
+  top: 10%;
+}
+
+#third-hr {
+  @include right-side-hr;
+  top: calc(10% + 75px);
+}
+
+#fourth-hr,
+#fifth-hr {
+  width: 60%;
+  margin-right: 20%;
+  right: 0;
+}
+
+#fifth-hr {
+  top: 0;
+}
+
+#discout-display {
+  position: relative;
 }
 
 #shop__section-titles {
@@ -64,7 +102,7 @@ body {
   width: 75%;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+  grid-template-rows: 75px 1fr 1fr 1fr 1fr;
   background: $customWhite;
 
   & > * {
@@ -77,7 +115,7 @@ body {
   width: 25%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 3fr 1fr;
+  grid-template-rows: 75px 3fr 1fr;
   background: $customLightGrey;
 }
 
@@ -98,6 +136,7 @@ body {
 }
 
 #discout-label {
+  padding-top: 25px;
   color: $darkGreyText;
 }
 
@@ -105,6 +144,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 
 span[id$="-quantity"] {
@@ -150,4 +190,8 @@ span[id$="-quantity"] {
   color: $customBlue;
   font-weight: bold;
   line-height: 24px;
+}
+
+.bold {
+  font-weight: bold;
 }
