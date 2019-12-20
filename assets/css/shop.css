@@ -105,6 +105,8 @@ span[id$="-quantity"] {
   font-weight: bold;
   color: royalblue;
   font-size: 24px; }
+  .item-button:active {
+    color: black; }
 
 #checkout-button {
   display: flex;

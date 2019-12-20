@@ -1,0 +1,13 @@
+@import "constants";
+
+@mixin flex-full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin quantity-mixin {
+  @include flex-full-center;
+  width: $buttonSize;
+  height: $buttonSize;
+}

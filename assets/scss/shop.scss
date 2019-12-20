@@ -1,15 +1,12 @@
-@mixin flex-full-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "constants";
+@import "mixins";
 
 body {
   position: absolute;
   height: 100%;
   width: 100%;
   @include flex-full-center;
-  background: midnightblue;
+  background: $customBackground;
   font-family: sans-serif;
 }
 
@@ -18,8 +15,8 @@ body {
   height: 90%;
   max-width: 1200px;
   max-height: 720px;
-  border: 3px solid black;
-  background: white;
+  border: 3px solid $customBlack;
+  background: $customWhite;
 }
 
 #shop__section-titles {
@@ -34,14 +31,14 @@ body {
 
   & :last-child {
     width: 25%;
-    background: whitesmoke;
+    background: $customLightGrey;
   }
 
   > * {
     height: 100%;
     line-height: 250%;
-    padding-left: 10px;
-    margin-left: 10px;
+    padding-left: $smallPadding;
+    margin-left: $smallPadding;
   }
 }
 
@@ -55,11 +52,11 @@ body {
 }
 
 .item-label {
-  background: white;
+  background: $customWhite;
   font-weight: bold;
 
   &:first-of-type {
-    padding-left: 20px;
+    padding-left: $bigPadding;
   }
 }
 
@@ -68,7 +65,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 1fr 1fr;
-  background: white;
+  background: $customWhite;
 
   & > * {
     display: flex;
@@ -81,27 +78,27 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 3fr 1fr;
-  background: whitesmoke;
+  background: $customLightGrey;
 }
 
 .shop__summary__spacer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 $smallPadding;
 }
 
 .individual-discount {
-  padding: 25px 10px;
+  padding: 25px $smallPadding;
 }
 
 #discout-label,
 #total-display {
-  padding: 10px;
+  padding: $smallPadding;
 }
 
 #discout-label {
-  color: dimgrey;
+  color: $darkGreyText;
 }
 
 #total-display {
@@ -110,49 +107,47 @@ body {
   justify-content: space-around;
 }
 
-@mixin quantity-mixin {
-  @include flex-full-center;
-  width: 40px;
-  height: 40px;
-}
-
 span[id$="-quantity"] {
   @include quantity-mixin;
   font-size: 18px;
   border-radius: 5px;
-  border: 1px solid darkgrey;
+  border: 1px solid $greyText;
 }
 
 .item-button {
   @include quantity-mixin;
   cursor: pointer;
   font-weight: bold;
-  color: royalblue;
+  color: $customBlue;
   font-size: 24px;
+
+  &:active {
+    color: $customBackground;
+  }
 }
 
 #checkout-button {
   @include flex-full-center;
   font-size: 18px;
-  color: white;
-  background: royalblue;
-  padding: 10px;
-  margin: 0 10px;
+  color: $customWhite;
+  background: $customBlue;
+  padding: $smallPadding;
+  margin: 0 $smallPadding;
   border-radius: 5px;
 }
 
 .item-box {
-  padding-left: 20px;
+  padding-left: $bigPadding;
 }
 
 .item-image {
   width: 100px;
   height: 100px;
-  margin-right: 10px;
+  margin-right: $smallPadding;
 }
 
 .item-description__title {
-  color: royalblue;
+  color: $customBlue;
   font-weight: bold;
   line-height: 24px;
 }
