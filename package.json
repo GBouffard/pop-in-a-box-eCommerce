@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine spec/*.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "scss": "node-sass assets/scss -o assets/css",
+    "watch-scss": "node-sass --watch assets/scss -o assets/css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "jasmine": "^3.5.0",
+    "node-sass": "^4.13.0",
     "open": "^7.0.0"
   }
 }
