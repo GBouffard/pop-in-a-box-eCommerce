@@ -1,3 +1,113 @@
-#shop-items-container {
+@mixin flex-full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background: red;
+  @include flex-full-center;
+}
+
+#shop__wrapper {
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  max-height: 720px;
+  border: 3px solid black;
+}
+
+#shop__section-titles {
+  display: flex;
+  height: 10%;
+
+  & :first-child {
+    width: 75%;
+    background: orange;
+  }
+
+  > * {
+    height: 100%;
+    line-height: 300%;
+  }
+}
+
+#shop__container {
+  display: flex;
+  height: 90%;
+}
+
+.justify-align-centered {
+  @include flex-full-center;
+}
+
+.item-label {
+  background: green;
+  font-weight: bold;
+}
+
+#shop__items-container {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+  background: yellow;
+
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#shop__summary-container {
+  width: 25%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 3fr 1fr;
+}
+
+.shop__summary__spacer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.individual-discount {
+  padding: 25px 10px;
+  background: purple;
+}
+
+#discout-label,
+#total-display {
+  padding: 10px;
+}
+
+#total-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.item-button {
+  @include flex-full-center;
+  cursor: pointer;
+  font-weight: bold;
+  color: blue;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+#checkout-button {
+  @include flex-full-center;
+  font-size: 24px;
+  color: white;
+  background: royalblue;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
 }

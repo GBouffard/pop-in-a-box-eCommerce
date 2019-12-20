@@ -13,29 +13,37 @@
   </head>
 
   <body>
-    <div
-      style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;"
-      id="shop-items-container"
-    >
-      <div>PRODUCT DETAIL</div>
-      <div>QUANTITY</div>
-      <div>PRICE</div>
-      <div>TOTAL</div>
-    </div>
+    <div id="shop__wrapper">
+      <div id="shop__section-titles">
+        <div>Shopping cart</div>
+        <div>Order Summary</div>
+      </div>
 
-    <div style="padding-top:150px">
-      <div>Order Summary</div>
-      <div>
-        <div id="total-items"></div>
-        <div id="undiscounted-cost"></div>
-      </div>
-      <div id="discout-display">
-        <div>DISCOUNTS:</div>
-        <div id="discounted-list"></div>
-      </div>
-      <div>
-        <div>TOTAL COST:</div>
-        <div id="total-cost"></div>
+      <div id="shop__container">
+        <div id="shop__items-container">
+          <div class="item-label">PRODUCT DETAIL</div>
+          <div class="justify-align-centered item-label">QUANTITY</div>
+          <div class="justify-align-centered item-label">PRICE</div>
+          <div class="justify-align-centered item-label">TOTAL</div>
+        </div>
+
+        <div id="shop__summary-container">
+          <div class="shop__summary__spacer">
+            <div id="total-items"></div>
+            <div id="undiscounted-cost"></div>
+          </div>
+          <div id="discout-display">
+            <div id="discout-label">DISCOUNTS:</div>
+            <div id="discounted-list"></div>
+          </div>
+          <div id="total-display">
+            <div class="shop__summary__spacer">
+              <div>TOTAL COST:</div>
+              <div id="total-cost"></div>
+            </div>
+            <button id="checkout-button">Checkout</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

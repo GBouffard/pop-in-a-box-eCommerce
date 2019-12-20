@@ -35,9 +35,9 @@ const displayIndivdualDiscounts = (kart, totalCost) => {
     kart.forEach(({ name, price, quantity, twoForOne, bulkDiscount, cost }) => {
       if ((twoForOne || bulkDiscount) && quantity > 1) {
         $(`#${name.toLowerCase()}-discount`).css("display", "block").html(`
-        <div>
+        <div class="shop__summary__spacer individual-discount">
           <div>${offerType(name, quantity, twoForOne, bulkDiscount)}</div>
-          <div>${quantity * price - cost}</div>
+          <div>- ${quantity * price - cost} €</div>
         </div>
       `);
       } else {
@@ -52,9 +52,9 @@ const displayIndivdualDiscounts = (kart, totalCost) => {
 // DOM Manipulation through jQuery
 $(document).ready(() => {
   const shop = new KartLogic();
-  const shopItemsContainer = $("#shop-items-container");
+  const shopItemsContainer = $("#shop__items-container");
 
-  $("#total-cost").text(0);
+  $("#total-cost").text(`0 €`);
   $("#total-items").text("No item");
   $("#discout-display").css("visibility", "hidden");
 
@@ -64,7 +64,7 @@ $(document).ready(() => {
     $("#total-items").text(calculateTotalItems(shop.kart));
     $("#undiscounted-cost").text(calculateUndiscountedCost(shop.kart));
     displayIndivdualDiscounts(shop.kart, shop.totalCost);
-    $("#total-cost").text(shop.totalCost);
+    $("#total-cost").text(shop.totalCost + " €");
   };
 
   ["Goku", "Naruto", "Luffy"].forEach(name => {
@@ -77,13 +77,13 @@ $(document).ready(() => {
 
     shopItemsContainer.append(`
       <div>${name}</div>
-      <div>
-        <button type="button" id="${addButtonId}"> + </button>
+      <div class="justify-align-centered">
+        <div id="${removeButtonId}" class="item-button"> - </div>
         <span id="${itemQuantityId}">${selectedItem.quantity}</span>
-        <button type="button" id="${removeButtonId}"> - </button>
+        <div id="${addButtonId}" class="item-button"> + </div>
       </div>
-      <div>${selectedItem.price} €</div>
-      <div id="${itemCostId}">${selectedItem.cost}</div>
+      <div class="justify-align-centered">${selectedItem.price} €</div>
+      <div id="${itemCostId}" class="justify-align-centered">${selectedItem.cost}</div>
     `);
 
     $("#discounted-list").append(`<div id="${lowerName}-discount"></div>`);
