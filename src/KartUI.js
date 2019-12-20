@@ -76,14 +76,24 @@ $(document).ready(() => {
     const itemCostId = `${lowerName}-cost`;
 
     shopItemsContainer.append(`
-      <div class="item-description">${name}</div>
+      <div class="item-box">
+        <img class="item-image" src="./assets/images/${lowerName}.jpg">
+        <div class="item-description">
+          <div class="item-description__title">${name} POP</div>
+          <div class="item-description__text">Produit code ${name
+            .toUpperCase()
+            .substr(0, 4)}</div>
+        </div>
+      </div>
       <div class="justify-align-centered">
         <div id="${removeButtonId}" class="item-button"> - </div>
         <span id="${itemQuantityId}">${selectedItem.quantity}</span>
         <div id="${addButtonId}" class="item-button"> + </div>
       </div>
       <div class="justify-align-centered">${selectedItem.price} €</div>
-      <div id="${itemCostId}" class="justify-align-centered">${selectedItem.cost}</div>
+      <div id="${itemCostId}" class="justify-align-centered">${
+      selectedItem.cost
+    }</div>
     `);
 
     $("#discounted-list").append(`<div id="${lowerName}-discount"></div>`);
@@ -98,4 +108,8 @@ $(document).ready(() => {
       updateShop(name, shop, itemQuantityId, itemCostId);
     });
   });
+
+  $(`#checkout-button`).click(() =>
+    window.alert("The checkout button does not work \nThis is a fake cart!")
+  );
 });
