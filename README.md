@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/GBouffard/pop-in-a-box-eCommerce.svg?branch=master)](https://travis-ci.com/GBouffard/pop-in-a-box-eCommerce)
+
 # :dolls: Pop in a box eCommerce shop :dolls:
 
 simple e-commerce shop with JavaScript and JQuery:
