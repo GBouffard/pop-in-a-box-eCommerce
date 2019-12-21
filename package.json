@@ -7,7 +7,8 @@
     "test": "jasmine spec/*.js",
     "start": "node index.js",
     "scss": "node-sass assets/scss -o assets/css",
-    "watch-scss": "node-sass --watch assets/scss -o assets/css"
+    "watch-scss": "node-sass --watch assets/scss -o assets/css",
+    "chai-test": "mocha chai-tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,10 @@
   },
   "homepage": "https://github.com/GBouffard/pop-in-a-box-eCommerce#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "express": "^4.17.1",
     "jasmine": "^3.5.0",
+    "mocha": "^6.2.2",
     "node-sass": "^4.13.0",
     "open": "^7.0.0"
   }

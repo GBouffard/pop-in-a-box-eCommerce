@@ -9,6 +9,7 @@ simple e-commerce shop with JavaScript and JQuery:
 - Javascript
 - JQuery
 - Jasmine
+- Chai
 - HTML
 - Sass
 - Node
@@ -34,3 +35,19 @@ The sheel script automatically:
 ## Screenshot
 
 ![](assets/images/screenshot.png)
+
+## Additional tests
+
+Jasmine's tests are passing but Jasmine's SpecRunner seems to not work like it used to.
+The only visual available is the dotted one:
+
+![](assets/images/jasmine-tests.png)
+
+In order to get a better visual representation I also wrote the tests using a combination of Chai and Mocha.
+It runs with:
+```
+npm run chai-test
+```
+and here is the test report:
+
+![](assets/images/chai-tests.png)
