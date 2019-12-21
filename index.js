@@ -8,13 +8,11 @@ const port = process.env.PORT || 3000;
 app.use(express.static(__dirname + "/"));
 app.use(express.static(__dirname + "assets/images"));
 
-app.get("/", function(request, response) {
-  console.log(request);
-  console.log(response);
+app.get("/", (request, response) => {
   response.sendFile(path.join(__dirname, "./", "./index.html"));
 });
 
-server.listen(3000, async function() {
+server.listen(3000, async () => {
   console.log(`Pop in a box eCommerce shop is running on ${port}`);
   await open(`http://localhost:${port}/`, { app: "google chrome" });
 });
