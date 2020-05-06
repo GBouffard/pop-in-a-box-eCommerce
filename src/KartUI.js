@@ -1,5 +1,3 @@
-const ghPagesUrl = 'https://gbouffard.github.io/pop-in-a-box-eCommerce';
-
 // helpers functions
 const findItem = (name, kart) => kart.find(el => el.name === name);
 
@@ -79,7 +77,7 @@ $(document).ready(() => {
 
     shopItemsContainer.append(`
       <div class="item-box">
-        <img class="item-image" src="${ghPagesUrl}/assets/images/${lowerName}.jpg">
+        <img class="item-image" src="./assets/images/${lowerName}.jpg">
         <div class="item-description">
           <div class="item-description__title">${name} POP</div>
           <div class="item-description__text">Produit code ${name
