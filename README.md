@@ -32,6 +32,7 @@ There are products discounts that will be applied automatically under some condi
 - Node
 - Express
 - Open
+- Github Pages
 
 ## How to run it
 
