@@ -33,6 +33,12 @@ There are products discounts that will be applied automatically under some condi
 - Express
 - Open
 - Github Pages
+- Netlify
+
+
+## Netlify Link:
+
+[Guillaume's Pop in a box eCommerce shop](https://guillaume-pop-in-a-box-ecommerce.netlify.app/)
 
 ## How to run it
 
