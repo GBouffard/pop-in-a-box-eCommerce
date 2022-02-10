@@ -23,7 +23,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "github-pages": "^3.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "open": "^7.0.0"
   },
   "devDependencies": {
